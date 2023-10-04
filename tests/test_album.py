@@ -23,6 +23,6 @@ def test_albums_are_equal():
 """
 We can format albums to strings nicely
 """
-def test_artists_format_nicely():
+def test_albums_format_nicely():
     album = Album(1, "Test Album", 1995, 2)
     assert str(album) == "Album(1, Test Album, 1995, 2)"
