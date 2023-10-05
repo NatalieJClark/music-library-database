@@ -19,3 +19,7 @@ for artist in artist_repository.all():
 album_repository = AlbumRepository(connection)
 for album in album_repository.all():
     print(album)
+
+# Retrieve the ablbum with id = 1
+album_repository = AlbumRepository(connection)
+print(album_repository.find(1))
