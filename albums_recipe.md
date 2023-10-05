@@ -82,6 +82,10 @@ class AlbumRepository():
         # Executes the SQL query:
         #   SELECT * FROM albums;
         # Returns an array of Album objects.
+    def find(self, artist_id):
+        # Executes the SQL query:
+        #   SELECT * FROM albums WHERE %s, [artist_id]
+        # Return the album records for the given artist_id
 
 ```
 
@@ -130,7 +134,19 @@ assert albums == [
     Album(12, 'Ring Ring', 1973, 2)
 ]
 
-
+"""
+When we call AlbumRepository#find
+Using an artist_id that corresponds to multiple ablums
+We get a list of all the corresponding albums back
+"""
+db_connection.seed(seeds/music_library.sql)
+repository = AlbumRepository(db_connection)
+albums = repository.all(2)
+assert albums == [
+    Album(3, 'Waterloo', 1974, 2),
+    Album(4, 'Super Trouper', 1980, 2),
+    Album(12, 'Ring Ring', 1973, 2)
+]
 ```
 
 Encode this example as a test.
