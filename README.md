@@ -1,7 +1,5 @@
 # Music Library
 
-# Project Overview
-
 This is my music library project for Module 3 of Makers
 
 I set up this project using a starter project from makers and used it to learn and practise the module objectives
