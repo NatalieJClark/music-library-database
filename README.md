@@ -45,7 +45,7 @@ pipenv, version ...
 # Activate the virtual environment
 ; pipenv shell
 # NB: you may need to change interpreter path, to import pytest and psycopg
-# This will give you the path
+# This will give you the path to use
 ; pipenv --venv
 
 # Create the database
