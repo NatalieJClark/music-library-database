@@ -17,6 +17,22 @@ This project uses `python`, `pyenv` and `pipenv`. Here's how to install it:
 
 ```shell
 # Install pyenv, a tool to manage different versions of Python.
+# This will ensure you have the latest Python, which has more readable error messages.
+; brew install pyenv
+# You may be given some extra instructions at the end of the command.
+# If you are, follow them. If not, keep going.
+
+# Now install the latest Python.
+; pyenv install 3.11
+
+# Install pipenv
+; python3 -m ensurepip --upgrade
+; pip3 install --user pipenv
+; echo 'export PATH="$PATH:$(python3 -m site --user-base)/bin" # Add Pipenv to PATH' >> ~/.zshrc
+; source ~/.zshrc
+; pipenv --version # Check pipenv is installed
+pipenv, version ...
+
 # Clone the repository to your local machine
 ; git clone https://github.com/NatalieJClark/music-library-database.git YOUR_PROJECT_NAME
 
@@ -27,7 +43,7 @@ This project uses `python`, `pyenv` and `pipenv`. Here's how to install it:
 ; pipenv install
 
 # Activate the virtual environment
-; pipenv shell
+; pipenv shell # NB: you may need to change interpreter path, to import pytest and psycopg
 
 # Create the database
 ; createdb YOUR_PROJECT_NAME
@@ -40,3 +56,6 @@ This project uses `python`, `pyenv` and `pipenv`. Here's how to install it:
 
 # Run the app
 ; python app.py
+
+# To exit the pipenv shell
+; exit # or Ctrl-D
