@@ -11,7 +11,7 @@
 I used this project to learn to:
 - [x] Setup a Python project that connects to a database.
 - [x] Test-drive Model and Repository classes to `SELECT` records from the database.
-- [x] Test-drive Repository class methods to INSERT, DELETE and UPDATE.
+- [x] Test-drive Repository class methods to `INSERT`, `DELETE` and `UPDATE` records in the database.
 
 ## Setup
 This project uses `python`, `pyenv` and `pipenv`. Here's how to install it:
